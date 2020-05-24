@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/footer.css">
+     <link rel="stylesheet" type="text/css" href="css/slider.css">
+
+
+    <title>BasketBall News</title>
+</head>
+
+<body>
+	<header>
+    <div id="slideout-menu">
+        <ul>
+            <li>
+                <a class="active"  href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="">Videos</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <input type="text" placeholder="Search Here">
+            </li>
+            <li>
+            	<button onclick="window.location.href = 'login.html';">LOGIN</button>
+            </li>
+            <li>
+            	<button onclick="window.location.href = 'registration.html';">REGISTER</button>
+            </li>
+        </ul>
+    </div>
+
+    <nav>
+        <div id="logo-img">
+            <a href="#">
+                <img src="img/logo.png" alt="GTCoding Logo">
+            </a>
+        </div>
+        <div id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+            <li>
+                <a class="active" href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="blogslist.html">Videos</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <div id="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </li>
+            <li>
+            	<button onclick="window.location.href = 'login.html';">LOGIN</button>
+            </li>
+            <li>
+            	<button onclick="window.location.href = 'registration.html';">REGISTER</button>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div id="searchbox">
+        <input type="text" placeholder="Search Here">
+    </div>
+</header>
+
+
+
+
+
+
+
+
+<section>
+	<br></br>
+	
+	<br></br>
+	<br></br>
+	<br></br>
+<!-- Ruju-->
+	
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/duke.jpg" style="width:100%">
+  <div class="text">College basketball recruiting rankings: Kentucky edges UNC, Duke for 2020's top class</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/loo.png" style="width:100%">
+  <div class="text">Warriors' Kevon Looney has core muscle surgery, is expected back next season</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/nba.jpg" style="width:100%">
+  <div class="text">Possible NBA return timeline: Training camps start June 21, games July 15</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</section>
+
+
+   <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <img src="logo.png" alt="" class="logo">
+          <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <p class="rights-text">© 2020 Created By BasketballNews All Rights Reserved.</p>
+        </div>
+
+        <div class="right-col">
+          <h1>Nese deshironi te njoftoheni per </br>lajmet e reja ne emailen tuaj: </h1>
+          <div class="border"></div>
+          <p>Enter Your Email to get our news and updates.</p>
+          <form action="" class="newsletter-form">
+            <input type="text" class="txtb" placeholder="Enter Your Email">
+            <input type="submit" class="btn" value="submit">
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<script>
+  
+  const menuIcon = document.getElementById("menu-icon");
+const slideoutMenu = document.getElementById("slideout-menu");
+const searchIcon = document.getElementById("search-icon");
+const searchBox = document.getElementById("searchbox");
+
+searchIcon.addEventListener('click', function () {
+  if (searchBox.style.top == '72px') {
+    searchBox.style.top = '24px';
+    searchBox.style.pointerEvents = 'none';
+  } else {
+    searchBox.style.top = '72px';
+    searchBox.style.pointerEvents = 'auto';
+  }
+});
+
+menuIcon.addEventListener('click', function () {
+  if (slideoutMenu.style.opacity == "1") {
+    slideoutMenu.style.opacity = '0';
+    slideoutMenu.style.pointerEvents = 'none';
+  } else {
+    slideoutMenu.style.opacity = '1';
+    slideoutMenu.style.pointerEvents = 'auto';
+  }
+})
+</script>
+</html>
